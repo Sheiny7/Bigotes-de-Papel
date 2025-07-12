@@ -50,6 +50,7 @@ nav{
 nav div div form input{
     margin-right: 10px;
 }
+
 form .form-control:focus{
     --bs-focus-ring-color: #dca378a1 !important;
     outline: none;
@@ -65,6 +66,16 @@ form .btn{
 .btn-primary:hover{
     background-color: #dca378 !important;
     border: #dca378;
+}
+
+@media (max-width: 767px) {
+    .redes {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 /*!Fin de la NAV*/
 
@@ -98,6 +109,48 @@ form .btn{
 .carousel-item img{
     object-position: center;
 }
+
+@media (max-width: 767px) {
+    .carrusel-principal .carousel-caption {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.7); /* fondo semitransparente */
+        padding: 10px 15px;
+        border-radius: 12px;
+        width: 90%;
+        color: #333;
+        text-align: center;
+        display: block !important; /* Mostrar en mobile */
+        max-height: 2650px; 
+        object-fit: cover;
+    }
+
+    .carrusel-principal .carousel-caption h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .carrusel-principal .carousel-caption p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .carrusel-principal img {
+        object-fit: cover;
+        height: 250px;
+    }
+
+    .carousel-item{
+        height: min-content;
+    }
+
+    .carrusel-principal{
+        height: min-content;
+    }
+}
+
 /*!Fin del carrusel*/
 
 
@@ -136,6 +189,32 @@ article h1{
     font-weight: 500;
     font-style: normal;
     font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .encabezado{
+        margin: 40px 10px 30px 10px;
+    }
+    .encabezado h1 {
+        font-size: 1.6em;
+        padding: 0 10px;
+        text-align: center;
+        line-height: 1.3;
+    }
+    .caja-info {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    .caja-info div h3 {
+        font-size: 1.2em;
+    }
+
+    .caja-info svg {
+        width: 35px;
+        height: 35px;
+    }
 }
 /*!FIN CAJA DE INFORMACION*/
 
@@ -184,7 +263,116 @@ article h1{
 .card-body a{
     background-color: #d7e0b5 !important;
     border: #d7e0b5;
+}
+@media (max-width: 768px) {
+    #carouselNovedades .carousel-inner {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 16px;
+        padding: 10px;
+    }
 
+    #carouselNovedades .carousel-item {
+        flex: 0 0 auto;
+        width: 80%;
+        max-width: 300px;
+        scroll-snap-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    #carouselNovedades .carousel-item .card-producto {
+        width: 100%;
+    }
+
+    /* Ocultar controles e indicadores en mobile */
+    #carouselNovedades .carousel-control-prev,
+    #carouselNovedades .carousel-control-next,
+    #carouselNovedades .carousel-indicators {
+        display: none;
+    }
+
+    /* Opcional: ocultar scrollbar visualmente */
+    #carouselNovedades .carousel-inner::-webkit-scrollbar {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .main-carrusel {
+        margin: 20px 10px;
+    }
+
+    .titulo-carrusel {
+        font-size: 28px;
+        padding-bottom: 20px;
+    }
+
+    .carousel-inner .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-inner .col-md-4 {
+        width: 90%;
+        max-width: 350px;
+        margin-bottom: 20px;
+    }
+
+    .card-producto {
+        max-height: none;
+    }
+
+    .card-producto img {
+        height: auto;
+    }
+
+    .card-producto .card-text {
+        font-size: 1rem;
+    }
+}
+
+.scroll-mobile {
+    display: none;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.scroll-mobile::-webkit-scrollbar {
+    display: none;  /* Safari y Chrome */
+}
+
+.scroll-mobile .card {
+    flex: 0 0 auto;
+    min-width: 250px;
+    scroll-snap-align: center;
+    margin-right: 16px;
+}
+
+/* Mostrar scroll-mobile solo en pantallas chicas */
+@media (max-width: 767.98px) {
+    .scroll-mobile {
+        display: flex;
+    }
+    #carouselNovedades {
+        display: none !important;
+    }
+}
+
+/* Mostrar carrusel solo en desktop */
+@media (min-width: 768px) {
+    #carouselNovedades {
+        display: block !important;
+    }
+    .scroll-mobile {
+        display: none !important;
+    }
 }
 /*!FIN CARRUSEL NOVEDAD Y PROMOCION*/
 
@@ -738,7 +926,7 @@ select, input[type="number"] {
 }
 
 /* Botón */
-.btn {
+.boton-registro-ingreso{
     width: 100%;
     padding: 12px;
     border: none;
