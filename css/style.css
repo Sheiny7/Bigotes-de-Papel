@@ -56,7 +56,7 @@ form .form-control:focus{
     border:#dca378;
 }
 
-form .btn,{
+form .btn{
     padding: 0px 20px 0px 20px;
     border:#dca3788c;
     background-color: #dca3788c;
@@ -249,7 +249,7 @@ article h1{
 }
 
 .footer-overlay {
-    ackground-color: rgba(0, 0, 0, 0.5); /* Oscurece para que el texto se lea */
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece para que el texto se lea */
     padding: 2rem;
     border-radius: 10px;
 }
@@ -421,15 +421,20 @@ article h1{
 
 /* Títulos del producto */
 .producto-info h2 {
-    font-size: 1.6rem;
+    font-size: 3rem;
     color: #dca378;
-    margin: 0;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .producto-info h4 {
     font-size: 1.2rem;
     color: #666;
     margin: 0;
+    font-family: "Kiwi Maru", serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 /* Select y input */
@@ -479,6 +484,13 @@ input[type="number"] {
     border-radius: 12px;
 }
 
+.producto-descripcion h4{
+    margin: 3;
+    font-family: "Kiwi Maru", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
 /* Responsive para pantallas chicas */
 @media (max-width: 768px) {
     .producto-contenido {
@@ -502,4 +514,255 @@ input[type="number"] {
 
 select, input[type="number"] {
     max-width: 250px;
+}
+
+
+/*TODOS LOS PRODUCTOS*/
+
+.grilla-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    justify-items: center;
+}
+
+.card {
+    width: 300px; /* tamaño fijo */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    background-color: #fffef9; /* opcional, con tu paleta */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* altura fija */
+    object-fit: cover; /* recorta sin deformar */
+}
+
+.card-body {
+    padding: 15px;
+}
+
+
+
+/*INGRESAR*/
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../img/fondo-hoja-carpeta.jpg') no-repeat center center/cover;
+    padding: 20px;
+}
+
+/* Caja principal de login */
+.login-box {
+    width: 450px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+/* Encabezado */
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Campos de entrada */
+.input-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: transparent;
+    color: #333;
+    font-size: 16px;
+}
+
+.input-box label {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #999;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -10px;
+    left: 35px;
+    font-size: 12px;
+    color: #dca378;
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+/* Checkbox y link */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Botón */
+.boton-registro-ingreso {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #d7e0b5;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-registro-ingreso:hover {
+    background-color: #ffd88d;
+}
+
+/* Link de registro */
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #dca378;
+    text-decoration: none;
+}
+
+
+
+/*REGISTRARSE*/
+
+/* Fondo general */
+.form-main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../img/fondo-hoja-carpeta.jpg') no-repeat center center/cover;
+    padding: 20px;
+}
+
+/* Caja de formulario */
+.form-content {
+    width: 450px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    color: #333;
+    text-align: center;
+}
+
+/* Título */
+.form-content h3 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Campos de entrada */
+.input-box{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: transparent;
+    color: #333;
+    font-size: 16px;
+}
+
+.input-box label {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #999;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -10px;
+    left: 35px;
+    font-size: 12px;
+    color: #dca378;
+}
+
+.input-control {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+}
+
+/* Botón */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #d7e0b5;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffd88d;
+}
+
+/* Link */
+.form-content p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.form-content a.gradient-text {
+    color: #dca378;
+    text-decoration: none;
+    font-weight: bold;
 }
