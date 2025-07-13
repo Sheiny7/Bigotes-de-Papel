@@ -265,7 +265,7 @@ article h1{
     border: #d7e0b5;
 }
 @media (max-width: 768px) {
-    #carouselNovedades .carousel-inner {
+    #carouselNovedades .carousel-inner, #carouselExample .carousel-inner {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -274,7 +274,7 @@ article h1{
         padding: 10px;
     }
 
-    #carouselNovedades .carousel-item {
+    #carouselNovedades .carousel-item, #carouselExample .carousel-item{
         flex: 0 0 auto;
         width: 80%;
         max-width: 300px;
@@ -283,19 +283,21 @@ article h1{
         justify-content: center;
     }
 
-    #carouselNovedades .carousel-item .card-producto {
+    #carouselNovedades .carousel-item .card-producto, #carouselExample .carousel-item .card-producto{
         width: 100%;
     }
 
     /* Ocultar controles e indicadores en mobile */
     #carouselNovedades .carousel-control-prev,
     #carouselNovedades .carousel-control-next,
-    #carouselNovedades .carousel-indicators {
+    #carouselNovedades .carousel-indicators,#carouselExample .carousel-control-prev,
+    #carouselExample .carousel-control-next,
+    #carouselExample.carousel-indicators {
         display: none;
     }
 
     /* Opcional: ocultar scrollbar visualmente */
-    #carouselNovedades .carousel-inner::-webkit-scrollbar {
+    #carouselNovedades .carousel-inner::-webkit-scrollbar, #carouselExample .carousel-inner::-webkit-scrollbar {
         display: none;
     }
 }
@@ -370,6 +372,17 @@ article h1{
     #carouselNovedades {
         display: block !important;
     }
+
+    .scroll-mobile {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    #carouselExample {
+        display: block !important;
+    }
+
     .scroll-mobile {
         display: none !important;
     }
