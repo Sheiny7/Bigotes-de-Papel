@@ -1,0 +1,58 @@
+
+nav{
+    background-color: $color-principal; 
+}
+
+.dropdown-menu{
+    background-color: $color-blanco-antiguo !important;
+    .dropdown-item{
+        &:hover{
+            background-color: $color-crema !important;
+        }
+    }
+}
+
+
+.redes{
+    padding-left: 7px;
+    a{
+        padding-left: 15px;
+        text-decoration:none;
+        svg{
+            transition: 0.5s;
+        }
+        .bi-whatsapp{
+            &:hover{
+                color: #128C7E;
+            }
+        }
+        .bi-facebook{
+            &:hover{
+                color: #4267B2;
+            }
+        }
+        .bi-instagram{
+            &:hover{
+                color: #C13584;
+            }
+        }
+    }
+}
+
+form{
+    .form-control{
+        margin-right: 10px;
+        &:focus{
+            --bs-focus-ring-color: #dca378a1 !important;
+            outline: none;
+            border: $color-principal;
+        }
+    }
+    .btn-primary{
+        @extend %boton;
+        &:hover{
+            background-color: #dca378 !important;
+            border: #dca378;
+        }
+    }
+}

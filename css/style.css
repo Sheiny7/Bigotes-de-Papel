@@ -1,24 +1,7 @@
 /*Colores*/
 /*!principal #ffd88d,secundario #dca378, verdecito #d7e0b5, cremita #f5f5d3, no blanco fef9f5*/
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 
-/*!NAV*/
-nav{
-    background-color: #ffd88d; 
-}
-
-.dropdown-menu{
-    background-color: #fef9f5 !important;
-}
-
-.dropdown-item:hover{
-    background-color:#f5f5d3 !important;
-}
 
 /*?REDES*/
 .redes{
