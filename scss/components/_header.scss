@@ -49,6 +49,7 @@ form{
         }
     }
     .btn-primary{
+        padding: 0px 20px 0px 20px;
         @extend %boton;
         &:hover{
             background-color: #dca378 !important;

@@ -1,5 +1,29 @@
-form .btn-primary {
-  padding: 0px 20px 0px 20px;
+.encabezado h1 {
+  font-family: "Borel", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-carrusel .titulo-carrusel {
+  font-family: "Playwrite IS", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.encabezado .caja-info div h3, .carousel-caption p {
+  font-family: "Kiwi Maru", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.carousel-caption h2 {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+form .btn-primary, .card-producto .card-body .btn-primary {
   background-color: rgba(220, 163, 120, 0.5490196078);
   border: rgba(220, 163, 120, 0.5490196078);
 }
@@ -8,6 +32,99 @@ form .btn-primary {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.carrusel-principal {
+  height: 500px;
+}
+
+.carousel-caption {
+  background-color: rgba(255, 255, 255, 0.459);
+  padding: 10px 15px;
+  border-radius: 12px;
+}
+.carousel-caption h2 {
+  color: #d7e0b5;
+  font-size: 50px;
+}
+.carousel-caption p {
+  font-size: 20px;
+  color: rgb(26, 23, 23);
+}
+
+.carousel-item {
+  height: 500px;
+}
+.carousel-item img {
+  object-position: center;
+}
+
+/*!CAJA DE INFORMACION INDEX*/
+.encabezado {
+  margin: 60px 0px 40px 0px;
+}
+.encabezado h1 {
+  text-align: center;
+}
+.encabezado .caja-info {
+  border: solid #d7e0b5;
+  border-radius: 15px;
+  margin: 20px;
+  background-color: #d7e0b5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 40px 20px;
+}
+.encabezado .caja-info div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.encabezado .caja-info div h3 {
+  font-size: 1.5em;
+}
+
+/*CARRUSELES NOVEDAD Y PROMOCION*/
+.main-carrusel {
+  margin: 50px;
+}
+.main-carrusel .titulo-carrusel {
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 30px;
+}
+.main-carrusel div .carrusel-inner {
+  height: auto !important;
+}
+
+.card-producto {
+  max-height: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: none;
+}
+.card-producto img {
+  height: 200px;
+  object-fit: cover;
+}
+.card-producto .card-body .card-text {
+  font-size: 0.9rem;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-producto .card-body .btn-primary {
+  background-color: #d7e0b5 !important;
+  border: #d7e0b5;
+}
+.card-producto .card-body .btn-primary:hover {
+  background-color: #dca378 !important;
+  border: #dca378;
 }
 
 nav {
@@ -49,9 +166,54 @@ form .form-control:focus {
   outline: none;
   border: #ffd88d;
 }
+form .btn-primary {
+  padding: 0px 20px 0px 20px;
+}
 form .btn-primary:hover {
   background-color: #dca378 !important;
   border: #dca378;
+}
+
+/*CUBOS CATEGORIAS*/
+.cubos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+.cubos a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.cubos a .cubo {
+  position: relative;
+  aspect-ratio: 1/1;
+}
+.cubos a .cubo:hover {
+  transform: scale(1.03);
+}
+.cubos a .cubo:hover img {
+  filter: brightness(100%) blur(0);
+}
+.cubos a .cubo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%) blur(1px);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.cubos a .cubo h5 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  z-index: 2;
 }
 
 /*# sourceMappingURL=estilos.css.map */
