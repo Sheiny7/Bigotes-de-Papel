@@ -1,4 +1,4 @@
-.encabezado h1 {
+.preguntas h1, .encabezado h1 {
   font-family: "Borel", cursive;
   font-weight: 400;
   font-style: normal;
@@ -11,19 +11,19 @@
   font-style: normal;
 }
 
-.encabezado .caja-info div h3, .carousel-caption p {
+.producto-descripcion h4, .producto-info div h4, .preguntas .accordion .accordion-item h2 .accordion-button, .encabezado .caja-info div h3, .carousel-caption p {
   font-family: "Kiwi Maru", serif;
   font-weight: 500;
   font-style: normal;
 }
 
-.carousel-caption h2 {
+.producto-info div h2, .carousel-caption h2 {
   font-family: "Amatic SC", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-form .btn-primary, .card-producto .card-body .btn-primary {
+.newsletter form .btn-primary, form .btn-primary, .grilla-productos .card .card-body .btn-primary, .producto-info div div .btn-primary, .card-producto .card-body .btn-primary {
   background-color: rgba(220, 163, 120, 0.5490196078);
   border: rgba(220, 163, 120, 0.5490196078);
 }
@@ -127,6 +127,327 @@ form .btn-primary, .card-producto .card-body .btn-primary {
   border: #dca378;
 }
 
+.preguntas {
+  padding: 3rem 1rem;
+  background-color: #fef9f5;
+}
+.preguntas h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #dca378;
+}
+.preguntas .accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.preguntas .accordion .accordion-item {
+  border: none;
+  border-bottom: 2px dashed #ffd88d;
+  background-color: #fef9f5;
+}
+.preguntas .accordion .accordion-item h2 .accordion-button {
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #f5f5d3;
+  color: #6B4C3B;
+  transition: all 0.2s ease-in-out;
+}
+.preguntas .accordion .accordion-item h2 .accordion-button:hover {
+  background-color: #dca378;
+  color: #3F3F3F;
+}
+.preguntas .accordion .accordion-item h2 .accordion-button:not(.collapsed) {
+  color: #6B4C3B;
+  background-color: #ffd88d;
+  box-shadow: none;
+}
+
+.accordion-body {
+  font-size: 1rem;
+  background-color: #f5f5d3;
+  padding: 1rem 1.5rem;
+  line-height: 1.6;
+  color: #5C5C5C;
+}
+
+.seccion-producto {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+.seccion-producto .contenedor-producto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+.seccion-producto .contenedor-producto .producto-img {
+  flex: 1 1 55%;
+  min-width: 300px;
+}
+
+.producto-info {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.producto-info div h2 {
+  font-size: 3rem;
+  color: #dca378;
+}
+.producto-info div h4 {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0;
+}
+.producto-info div select {
+  width: 100%;
+  max-width: 250px;
+}
+.producto-info div form {
+  width: 100%;
+  max-width: 250px;
+}
+.producto-info div form input {
+  width: 100%;
+  max-width: 250px;
+}
+.producto-info div form input[type=number] {
+  width: 100%;
+  max-width: 250px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.producto-info div div .btn-primary {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  margin-top: 20px;
+}
+.producto-info div div .btn-primary:focus {
+  outline: 2px solid #dca378;
+  outline-offset: 2px;
+}
+
+.producto-descripcion {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #ffd88d;
+  line-height: 1.6;
+  background-color: #fef9f5;
+  padding: 20px;
+  border-radius: 12px;
+}
+.producto-descripcion h4 {
+  margin: 3;
+}
+
+.grilla-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  justify-items: center;
+}
+.grilla-productos .card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fffef9;
+}
+.grilla-productos .card .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.grilla-productos .card .card-body {
+  padding: 15px;
+}
+.grilla-productos .card .card-body .btn-primary:hover {
+  background-color: #dca378 !important;
+  border: #dca378;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../img/fondo-hoja-carpeta.jpg") no-repeat center center/cover;
+  padding: 20px;
+}
+.wrapper .login-box {
+  width: 450px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+.wrapper .login-box form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+}
+.wrapper .login-box form .input-box {
+  position: relative;
+  margin-bottom: 25px;
+}
+.wrapper .login-box form .input-box .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #666;
+}
+.wrapper .login-box form .input-box input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  color: #333;
+  font-size: 16px;
+}
+.wrapper .login-box form .input-box input:focus + label, .wrapper .login-box form .input-box input:valid + label {
+  top: -10px;
+  left: 35px;
+  font-size: 12px;
+  color: #dca378;
+}
+.wrapper .login-box form .input-box input label {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #999;
+  transition: 0.3s ease;
+}
+.wrapper .login-box form .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.wrapper .login-box form .boton-registro-ingreso {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #d7e0b5;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.wrapper .login-box form .boton-registro-ingreso:hover {
+  background-color: #ffd88d;
+}
+.wrapper .login-box form .register-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+.wrapper .login-box form .register-link p a {
+  color: #dca378;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../img/fondo-hoja-carpeta.jpg") no-repeat center center/cover;
+  padding: 20px;
+}
+.form-main .form-content {
+  width: 450px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  color: #333;
+  text-align: center;
+}
+.form-main .form-content h3 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+}
+.form-main .form-content form .input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+.form-main .form-content form .input-box input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  color: #333;
+  font-size: 16px;
+}
+.form-main .form-content form .input-box input:focus + label, .form-main .form-content form .input-box input:valid + label {
+  top: -10px;
+  left: 35px;
+  font-size: 12px;
+  color: #dca378;
+}
+.form-main .form-content form .input-box label {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #999;
+  transition: 0.3s ease;
+}
+.form-main .form-content form .boton-registro-ingreso {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #d7e0b5;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.form-main .form-content form .boton-registro-ingreso:hover {
+  background-color: #ffd88d;
+}
+.form-main .form-content p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.form-main .form-content p a {
+  color: #dca378;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 nav {
   background-color: #ffd88d;
 }
@@ -214,6 +535,66 @@ form .btn-primary:hover {
   color: #fff;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
   z-index: 2;
+}
+
+/*Fondo*/
+.footer {
+  position: relative;
+  background-image: url(../img/fondo-portada-bigotes.png);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 1rem;
+  color: white;
+  z-index: 1;
+}
+.footer .footer-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/*redes*/
+.redes-footer h6 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.redes-footer div a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: 0.3s;
+}
+.redes-footer div a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.redes-footer div a:hover svg {
+  transform: scale(1.1);
+}
+.redes-footer div a svg {
+  fill: white;
+  transition: transform 0.2s ease;
+  width: 35px;
+  height: 35px;
+}
+
+.underline {
+  color: #fef9f5;
+  text-decoration: none;
+}
+
+/*NEWSLETTER*/
+.newsletter form input {
+  max-width: 250px;
+}
+@media (max-width: 768px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

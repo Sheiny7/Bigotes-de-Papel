@@ -1,0 +1,73 @@
+/*Fondo*/
+.footer {
+    position: relative;
+    background-image: url(../img/fondo-portada-bigotes.png);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 1rem;
+    color: white;
+    z-index: 1;
+    .footer-overlay{
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        border-radius: 10px;
+    }
+}
+
+/*redes*/
+.redes-footer{ 
+    h6{
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    div{
+        a{
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.85;
+            transition: 0.3s;
+            &:hover{
+                opacity: 1;
+                text-decoration: underline;
+                svg{
+                    transform: scale(1.1);
+                }
+            }
+            svg{
+                fill: white;
+                transition: transform 0.2s ease;
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}
+
+.underline{
+    color: $color-blanco-antiguo;
+    text-decoration: none;
+}
+
+/*NEWSLETTER*/
+.newsletter{
+    form{
+        input{
+            max-width: 250px;
+        }
+        .btn-primary{
+            @extend %boton
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+    width: 100%;
+    }
+}

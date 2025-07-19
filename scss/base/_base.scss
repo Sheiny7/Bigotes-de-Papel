@@ -109,3 +109,363 @@
         }
     }
 }
+
+//FIN DEL INDEX//
+
+
+//PREGUNTAS FRECUENTES//
+
+.preguntas {
+    padding: 3rem 1rem;
+    background-color: $color-blanco-antiguo;
+    h1{
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: $color-secundario;
+        @extend %tipografia-encabezado;
+    }
+    .accordion{
+        max-width: 800px;
+        margin: 0 auto;
+        border-radius: 12px;
+        overflow: hidden;
+        .accordion-item{
+            border: none;
+            border-bottom: 2px dashed $color-principal;
+            background-color: $color-blanco-antiguo;
+            h2{
+                .accordion-button{
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    background-color: $color-crema;
+                    color: #6B4C3B;
+                    @extend %tipografia-secundaria;
+                    transition: all 0.2s ease-in-out;
+                    &:hover{
+                        background-color: $color-secundario;
+                        color: #3F3F3F;
+                    }
+                    &:not(.collapsed){
+                        color: #6B4C3B;
+                        background-color: $color-principal;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.accordion-body {
+    font-size: 1rem;
+    background-color: $color-crema;
+    padding: 1rem 1.5rem;
+    line-height: 1.6;
+    color: #5C5C5C;
+}
+//FIN DE PREGUNTAS//
+
+//PRODUCTO: AGENDA//
+.seccion-producto {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    font-family: sans-serif;
+    .contenedor-producto{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: flex-start;
+        .producto-img{
+            flex: 1 1 55%;
+            min-width: 300px;
+        }
+    }
+}
+
+.producto-info {
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    div{
+        h2{
+            font-size: 3rem;
+            color: $color-secundario;
+            @extend %tipografia-terciaria;
+        }
+        h4{
+            font-size: 1.2rem;
+            color: #666;
+            margin: 0;
+            @extend %tipografia-secundaria;
+        }   
+    }
+    div{
+        select{
+            width: 100%;
+            max-width: 250px;
+        }
+        form{
+            width: 100%;
+            max-width: 250px;
+            input{
+                width: 100%;
+                max-width: 250px;
+                &[type="number"]{
+                    width: 100%;
+                    max-width: 250px;
+                    padding: 6px;
+                    border-radius: 6px;
+                    border: 1px solid #ccc;
+                }
+            }
+        }
+        div{
+            .btn-primary{
+                @extend %boton;
+                padding: 10px 16px;
+                font-size: 1rem;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+                margin-top: 20px;
+                &:focus{
+                    outline: 2px solid $color-secundario;
+                    outline-offset: 2px;
+                }
+            }
+        }
+    }
+}
+
+.producto-descripcion {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid $color-principal;
+    line-height: 1.6;
+    background-color: $color-blanco-antiguo;
+    padding: 20px;
+    border-radius: 12px;
+    h4{
+        margin: 3;
+        @extend %tipografia-secundaria;
+    }
+}
+//FIN//
+
+//TODOS LOS PRODUCTOS//
+.grilla-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    justify-items: center;
+    .card{
+        width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+        background-color: #fffef9;
+        .card-img-top{
+            width: 100%;
+            height: 200px; 
+            object-fit: cover;
+        }
+        .card-body{
+            padding: 15px;
+            .btn-primary{
+                @extend %boton;
+                &:hover{
+                    background-color: $color-secundario !important;
+                    border: $color-secundario;
+                }
+            }
+        }
+    }
+}
+
+//INGRESAR//
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../img/fondo-hoja-carpeta.jpg') no-repeat center center/cover;
+    padding: 20px;
+    .login-box{
+        width: 450px;
+        padding: 40px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px); 
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        color: #333;
+        form{
+            h2{
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 28px;
+                color: #333;
+            }
+            .input-box{
+                position: relative;
+                margin-bottom: 25px;
+                .icon{
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    transform: translateY(-50%);
+                    color: #666;
+                }
+                input{
+                    width: 100%;
+                    padding: 10px 10px 10px 40px;
+                    border: none;
+                    border-bottom: 2px solid #ccc;
+                    background: transparent;
+                    color: #333;
+                    font-size: 16px;
+                    &:focus + label,
+                    &:valid + label {
+                        top: -10px;
+                        left: 35px;
+                        font-size: 12px;
+                        color: #dca378;
+                    }
+                    label{
+                    position: absolute;
+                    left: 40px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    pointer-events: none;
+                    color: #999;
+                    transition: 0.3s ease;
+                    }
+                }
+            }
+            .remember-forgot{
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+            .boton-registro-ingreso{
+                width: 100%;
+                padding: 12px;
+                border: none;
+                border-radius: 8px;
+                background-color: #d7e0b5;
+                color: #333;
+                font-weight: bold;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                &:hover{
+                    background-color: #ffd88d;
+                }
+            }
+            .register-link{
+                text-align: center;
+                margin-top: 15px;
+                font-size: 14px;
+                p{
+                    a{
+                        color: #dca378;
+                        text-decoration: none;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+//FIN DE INGRESO//
+
+//REGISTRO//
+
+.form-main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../img/fondo-hoja-carpeta.jpg') no-repeat center center/cover;
+    padding: 20px;
+    .form-content{
+        width: 450px;
+        padding: 40px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px); 
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        color: #333;
+        text-align: center;
+        h3{
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #333;
+        }
+        form{
+            .input-box{
+                position: relative;
+                margin-bottom: 20px;
+                input{
+                    width: 100%;
+                    padding: 10px 10px 10px 40px;
+                    border: none;
+                    border-bottom: 2px solid #ccc;
+                    background: transparent;
+                    color: #333;
+                    font-size: 16px;
+                    &:focus + label,
+                    &:valid + label {
+                        top: -10px;
+                        left: 35px;
+                        font-size: 12px;
+                        color: #dca378;
+                    }
+                }
+                label{
+                    position: absolute;
+                    left: 40px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    pointer-events: none;
+                    color: #999;
+                    transition: 0.3s ease;
+                }
+            }
+            .boton-registro-ingreso{
+                width: 100%;
+                padding: 12px;
+                border: none;
+                border-radius: 8px;
+                background-color: #d7e0b5;
+                color: #333;
+                font-weight: bold;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                &:hover{
+                    background-color: #ffd88d;
+                }
+            }
+        }
+        p{
+            margin-top: 20px;
+            font-size: 14px;
+            a{
+                color: #dca378;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        }
+    }
+}
