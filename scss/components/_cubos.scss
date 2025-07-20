@@ -1,7 +1,7 @@
 /*CUBOS CATEGORIAS*/
 .cubos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(4, 1fr); 
     gap: 1rem;
     padding: 2rem 1rem;
     a{
@@ -10,7 +10,9 @@
         display: block;
         .cubo{
             position: relative;
-            aspect-ratio: 1 / 1;
+            align-items: center;
+            text-align: center;
+            border-radius: 12px;
             &:hover{
                 transform: scale(1.03);
                 img{
@@ -19,7 +21,8 @@
             }
             img{
                 width: 100%;
-                height: 100%;
+                height: auto;
+                aspect-ratio: 4 / 3;
                 object-fit: cover;
                 filter: brightness(60%) blur(1px);
                 transition: transform 0.3s ease, filter 0.3s ease;
@@ -40,4 +43,13 @@
     }
 }
 
+//MEDIA QUERI//
+.cubos{
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
 
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}

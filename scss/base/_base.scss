@@ -49,6 +49,7 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
         padding: 40px 20px;
+        text-align: center;
         div{
             display: flex;
             flex-direction: column;
@@ -193,11 +194,12 @@
     div{
         h2{
             font-size: 3rem;
+            text-align: center;
             color: $color-secundario;
             @extend %tipografia-terciaria;
         }
         h4{
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: #666;
             margin: 0;
             @extend %tipografia-secundaria;

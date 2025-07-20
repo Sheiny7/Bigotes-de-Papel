@@ -55,12 +55,12 @@
             max-width: 250px;
         }
         .btn-primary{
-            @extend %boton
+            @extend %boton;
         }
     }
 }
 
-
+//MEDIAQUERI//
 @media (max-width: 768px) {
     .newsletter-form {
         flex-direction: column;
