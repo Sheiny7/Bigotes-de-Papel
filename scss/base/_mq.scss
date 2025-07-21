@@ -54,7 +54,7 @@
     }
     .caja-info {
       display: grid;
-      grid-template-columns: 1fr; // Una sola columna
+      grid-template-columns: 1fr; 
       gap: 20px;
       padding: 20px 15px;
       div {
@@ -70,6 +70,55 @@
   }
 }
 
+//  CARRUSEL NOVEDADES//
+@media (min-width: 1221px) {
+  #carouselNovedades {
+    display: block !important;
+  }
+  .scroll-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1220px) {
+  #carouselNovedades, #carousel-novedades {
+    display: none !important;
+  }
+  .scroll-mobile {
+    display: flex !important;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px;
+  }
+  .scroll-mobile .card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-width: 250px;
+  }
+}
+
+.scroll-mobile {
+  @media (max-width: 1220px) {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px;
+    .card-producto {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      min-width: 260px;
+      max-width: 280px;
+      height: auto;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
 
 //Producto agenda//
 @media (max-width: 768px) {

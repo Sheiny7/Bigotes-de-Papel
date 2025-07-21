@@ -683,6 +683,53 @@ form .btn-primary:hover {
     height: 35px;
   }
 }
+@media (min-width: 1221px) {
+  #carouselNovedades {
+    display: block !important;
+  }
+  .scroll-mobile {
+    display: none !important;
+  }
+}
+@media (max-width: 1220px) {
+  #carouselNovedades, #carousel-novedades {
+    display: none !important;
+  }
+  .scroll-mobile {
+    display: flex !important;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px;
+  }
+  .scroll-mobile .card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-width: 250px;
+  }
+}
+@media (max-width: 1220px) {
+  .scroll-mobile {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px;
+  }
+  .scroll-mobile .card-producto {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-width: 260px;
+    max-width: 280px;
+    height: auto;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
 @media (max-width: 768px) {
   .seccion-producto .contenedor-producto {
     flex-direction: column;
